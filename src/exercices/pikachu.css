@@ -1,0 +1,263 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    overflow:hidden;
+    background:#87CEEB;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.scene{
+    position:relative;
+    width:100%;
+    height:100vh;
+}
+
+/**********************
+Ciel
+**********************/
+
+.cloud{
+    position:absolute;
+    background:white;
+    width:120px;
+    height:50px;
+    border-radius:50px;
+}
+
+.cloud::before,
+.cloud::after{
+    content:"";
+    position:absolute;
+    background:white;
+    border-radius:50%;
+}
+
+.cloud::before{
+    width:45px;
+    height:45px;
+    left:15px;
+    top:-20px;
+}
+
+.cloud::after{
+    width:60px;
+    height:60px;
+    right:15px;
+    top:-30px;
+}
+
+.cloud1{
+    top:70px;
+    animation:moveClouds 18s linear infinite;
+}
+
+.cloud2{
+    top:170px;
+    animation:moveClouds 25s linear infinite;
+}
+
+.cloud:hover{
+    transform:scale(1.2);
+    transition:transform .5s ease;
+    animation-duration:6s;
+}
+
+/**********************
+Forêt
+**********************/
+
+.forest{
+    position:absolute;
+    bottom:100px;
+    width:100%;
+}
+
+.tree{
+    position:absolute;
+    bottom:0;
+    width:40px;
+    height:150px;
+    background:#7B4A12;
+    transform-origin:bottom;
+}
+
+.tree::before{
+    content:"";
+    position:absolute;
+    width:110px;
+    height:110px;
+    background:green;
+    border-radius:50%;
+    left:-35px;
+    top:-70px;
+}
+
+.tree1{
+    left:15%;
+    animation:wind 3s ease-in-out infinite alternate;
+}
+
+.tree2{
+    left:45%;
+    animation:wind 5s ease-in-out infinite alternate;
+}
+
+.tree3{
+    left:75%;
+    animation:wind 4s ease-in-out infinite alternate;
+}
+
+/**********************
+Sol
+**********************/
+
+.scene::after{
+    content:"";
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:100px;
+    background:#3FA34D;
+}
+
+/**********************
+Pikachu
+**********************/
+
+.pikachu{
+    position:absolute;
+    bottom:80px;
+    left:0;
+    width:90px;
+    height:90px;
+    animation:walk 8s ease-in-out infinite alternate;
+}
+
+.face{
+    position:absolute;
+    width:90px;
+    height:90px;
+    background:#FFD93D;
+    border-radius:50%;
+}
+
+.ear{
+    position:absolute;
+    width:18px;
+    height:55px;
+    background:#FFD93D;
+    border-radius:20px;
+    top:-35px;
+}
+
+.ear::after{
+    content:"";
+    position:absolute;
+    width:18px;
+    height:15px;
+    background:black;
+    border-radius:20px 20px 0 0;
+}
+
+.ear.left{
+    left:12px;
+    transform:rotate(-20deg);
+}
+
+.ear.right{
+    right:12px;
+    transform:rotate(20deg);
+}
+
+.eye{
+    position:absolute;
+    width:10px;
+    height:16px;
+    background:black;
+    border-radius:50%;
+    top:28px;
+}
+
+.eye.left{
+    left:20px;
+}
+
+.eye.right{
+    right:20px;
+}
+
+.cheek{
+    position:absolute;
+    width:18px;
+    height:18px;
+    background:red;
+    border-radius:50%;
+    top:52px;
+}
+
+.cheek.left{
+    left:10px;
+}
+
+.cheek.right{
+    right:10px;
+}
+
+.nose{
+    position:absolute;
+    width:6px;
+    height:6px;
+    background:black;
+    left:42px;
+    top:45px;
+    border-radius:50%;
+}
+
+/**********************
+Pokéball
+**********************/
+
+.pokeball{
+    position:absolute;
+    bottom:120px;
+    right:120px;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:
+        linear-gradient(red 50%, white 50%);
+    border:3px solid black;
+    transition:.5s;
+}
+
+.pokeball::before{
+    content:"";
+    position:absolute;
+    width:60px;
+    height:4px;
+    background:black;
+    top:28px;
+}
+
+.pokeball::after{
+    content:"";
+    position:absolute;
+    width:14px;
+    height:14px;
+    background:white;
+    border:3px solid black;
+    border-radius:50%;
+    top:20px;
+    left:20px;
+}
+
+.pokeball:hover{
+    transform:rotate(360deg) scale(1.2);
+}

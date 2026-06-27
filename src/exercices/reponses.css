@@ -1,0 +1,45 @@
+
+/**********************
+
+
+@keyframes walk{
+
+    0%{
+        transform:translateX(0) scale(1);
+    }
+
+    50%{
+        transform:translateX(45vw) scale(1.08);
+    }
+
+    100%{
+        transform:translateX(90vw) scale(1);
+    }
+
+}
+
+@keyframes wind{
+
+    from{
+        transform:rotate(-3deg);
+    }
+
+    to{
+        transform:rotate(3deg);
+    }
+
+}
+
+@keyframes moveClouds{
+
+    from{
+        transform:translateX(-200px);
+    }
+
+    to{
+        transform:translateX(120vw);
+    }
+
+}
+    Animations
+**********************/
